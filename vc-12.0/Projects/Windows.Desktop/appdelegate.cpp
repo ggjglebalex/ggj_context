@@ -1,5 +1,6 @@
 #include "appdelegate.h"
-#include  "macros.h"
+#include "macros.h"
+#include "levelloader.h"
 
 #include <vector>
 #include <string>
@@ -7,10 +8,11 @@
 //--------------------------------------------------------------------
 
 USING_NS_CC;
-using namespace std;
 
-AppDelegate::AppDelegate() {
+//--------------------------------------------------------------
 
+AppDelegate::AppDelegate() 
+{
 }
 
 AppDelegate::~AppDelegate()
@@ -44,7 +46,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     Size frameSize = glview->getFrameSize();
 
-    vector<string> searchPath;
+    std::vector< std::string > searchPath;
 
     // In this demo, we select resource according to the frame's height.
     // If the resource size is different from design resolution size, you need to set contentScaleFactor.
@@ -86,6 +88,15 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     //director->runWithScene(scene);
+
+    //-----------------------------------------------------
+
+    LevelData lData;
+    LevelLoader loader;
+
+    loader.loadLevelFiles( lData, "layout.bmp", "desc.xml" );
+
+    //-----------------------------------------------------
 
     return true;
 }

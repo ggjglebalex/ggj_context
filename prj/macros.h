@@ -23,6 +23,8 @@ and open iphone simulator or create a window of 480x320 size.
 [Note] Normally, developer just need to define one design resolution(e.g. 960x640) with one or more resources.
 */
 
+//--------------------------------------------------------------
+
 #define DESIGN_RESOLUTION_480X320    0
 #define DESIGN_RESOLUTION_1024X768   1
 #define DESIGN_RESOLUTION_2048X1536  2
@@ -53,4 +55,6 @@ static cocos2d::Size designResolutionSize = cocos2d::Size(2048, 1536);
 // The font size 24 is designed for small resolution, so we should change it to fit for current design resolution
 #define TITLE_FONT_SIZE  (cocos2d::Director::getInstance()->getOpenGLView()->getDesignResolutionSize().width / smallResource.size.width * 24)
 
-#endif /* __APPMACROS_H__ */
+
+//--------------------------------------------------------------
+#endif

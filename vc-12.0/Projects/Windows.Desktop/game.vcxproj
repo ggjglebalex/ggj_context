@@ -52,7 +52,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;COCOS2DXWIN32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)/../../../ext/cocos2d-x-3.3/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/cocos/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/cocos/platform/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/external/glfw3/include/win32/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/external/win32-specific/gles/include/OGLES/;$(ProjectDir)/../../../prj/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)/../../../ext/cocos2d-x-3.3/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/cocos/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/cocos/platform/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/external/glfw3/include/win32/;$(ProjectDir)/../../../ext/cocos2d-x-3.3/external/win32-specific/gles/include/OGLES/;$(ProjectDir)/../../../prj/;$(ProjectDir)/../../../ext/pugixml/;$(ProjectDir)/../../../ext/EasyBMP/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -82,12 +82,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\ext\EasyBMP\bmpfile.c" />
+    <ClCompile Include="..\..\..\ext\EasyBMP\EasyBMP.cpp" />
+    <ClCompile Include="..\..\..\ext\pugixml\pugixml.cpp" />
     <ClCompile Include="..\..\..\prj\appdelegate.h" />
+    <ClCompile Include="..\..\..\prj\gameobject.cpp" />
+    <ClCompile Include="..\..\..\prj\levelloader.cpp" />
     <ClCompile Include="..\..\..\prj\main.cpp" />
     <ClCompile Include="appdelegate.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\ext\EasyBMP\bmpfile.h" />
+    <ClInclude Include="..\..\..\ext\EasyBMP\EasyBMP.h" />
+    <ClInclude Include="..\..\..\ext\EasyBMP\EasyBMP_BMP.h" />
+    <ClInclude Include="..\..\..\ext\EasyBMP\EasyBMP_DataStructures.h" />
+    <ClInclude Include="..\..\..\ext\EasyBMP\EasyBMP_VariousBMPutilities.h" />
+    <ClInclude Include="..\..\..\ext\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="..\..\..\ext\pugixml\pugixml.hpp" />
+    <ClInclude Include="..\..\..\prj\gameobject.h" />
+    <ClInclude Include="..\..\..\prj\levelloader.h" />
     <ClInclude Include="..\..\..\prj\macros.h" />
+    <ClInclude Include="..\..\..\prj\xmlitems.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
